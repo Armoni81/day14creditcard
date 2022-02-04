@@ -4,16 +4,21 @@
 
 function maskify(cc) {
     let Z = cc.length-4
-    for (i = 0; i<= cc.length;i++){
-        console.log(cc[i] ='#')
+    let maskCC = ''
+    console.log(Z)
+    for (i = 0; i< cc.length;i++){
+        console.log(cc[i])
 
 
-        if (i >cc.length){
-           //console.log(cc[i] ='#') 
-           break;
+        if (i< Z){
+            maskCC += '#'
         } 
+        else {
+            maskCC += cc[i]
+        }
     }
 
-return cc
+return maskCC
 }
-maskify('9676999')
+
+console.log(maskify('123456789894237'))
